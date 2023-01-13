@@ -1,7 +1,7 @@
 import {
   Routes,
   Route,
-  BrowserRouter
+  HashRouter 
 } from "react-router-dom"
 import { LocationsSearch } from './pages/LocationsSearch';
 import { HotelsSearch } from './pages/HotelsSearch';
@@ -10,7 +10,7 @@ import { TopBar } from "./components/TopBar";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="app">
         <main className="content">
           <TopBar />
@@ -21,7 +21,7 @@ const App = () => {
           </Routes>
         </main>
       </div>
-    </BrowserRouter>
+    </HashRouter>
 
   );
 }
