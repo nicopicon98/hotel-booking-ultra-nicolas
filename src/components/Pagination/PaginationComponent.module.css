@@ -1,0 +1,10 @@
+.pagContainer {
+  display: flex;
+  justify-content: center; 
+  gap: 2px
+}
+
+.pagContainer__btn{
+  background-color: #7b1fa2;
+  border: none;
+}

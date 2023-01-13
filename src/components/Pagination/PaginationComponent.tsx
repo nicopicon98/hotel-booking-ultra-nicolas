@@ -1,3 +1,5 @@
+import classes from './PaginationComponent.module.css'
+
 interface Props {
   hotelsPerPage: number
   totalHotels?: number
@@ -13,10 +15,10 @@ const PaginationComponent = ({ hotelsPerPage, totalHotels = 0, paginate }: Props
 
   return (
     <nav>
-      <ul style={{ display: 'flex', justifyContent: 'center', gap: '2px' }}>
+      <ul className={classes.pagContainer}>
         {pageNumbers.map(number => (
-          <li key={number} className='page-item'>
-            <button onClick={() => paginate(number)} style={{ backgroundColor: '#7b1fa2', border: 'none' }}>
+          <li key={number}>
+            <button onClick={() => paginate(number)} className={classes["pagContainer__btn"]}>
               {number}
             </button>
           </li>
