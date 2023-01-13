@@ -1,0 +1,35 @@
+.locSearchContainer {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.locSearchContainer__formCon {
+  width: 28rem;
+  min-width: 24rem;
+}
+
+.locaSearchContainer__respCon {
+  margin-top: 10;
+  max-width: 100%;
+}
+
+.locaSearchContainer__respMatchCon {
+  display: flex;
+  gap: 5;
+}
+
+.locaSearchContainer__respMatchLegend {
+  font-weight: bold;
+}
+
+.locaSearchContainer__respMatchIdCon {
+  display: flex;
+  gap: 5;
+}
+
+.locaSearchContainer__respMatchId {
+  font-weight: bold
+}

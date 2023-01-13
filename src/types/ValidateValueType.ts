@@ -1,0 +1,1 @@
+export type ValidateValue = (value: any) => boolean;
