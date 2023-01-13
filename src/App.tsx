@@ -1,7 +1,7 @@
 import {
   Routes,
   Route,
-  HashRouter 
+  HashRouter,
 } from "react-router-dom"
 import { LocationsSearch } from './pages/LocationsSearch';
 import { HotelsSearch } from './pages/HotelsSearch';

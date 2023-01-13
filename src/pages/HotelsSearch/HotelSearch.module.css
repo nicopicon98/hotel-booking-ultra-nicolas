@@ -8,18 +8,29 @@
 
 .container__hotelsCon {
   display: flex;
+  list-style: none;
   flex-direction: column;
   gap: 12px;
   height: 88%;
 }
 
-@media (min-width: 400px) and (max-width: 1200px){
+@media (max-width: 1200px){
   .container__hotelsCon {
-    list-style: none;
     display: grid;
     height: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    margin: 0px 11px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 768px){
+  .container__hotelsCon {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     margin: 0px 11px;
     margin-bottom: 12px;
   }

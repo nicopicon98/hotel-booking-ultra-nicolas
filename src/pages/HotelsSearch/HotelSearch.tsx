@@ -25,6 +25,9 @@ export const HotelsSearch = () => {
         image={e.propertyImage?.image.url}
         hotelName={e.name}
         location={hotels!.location}
+        feedback={e.reviews}
+        partialPrice={e.price?.displayMessages[0].lineItems[1].price?.formatted!}
+        totalPrice={e.price?.displayMessages[0].lineItems[0].price?.formatted!}
         key={e.id}
       />
     )

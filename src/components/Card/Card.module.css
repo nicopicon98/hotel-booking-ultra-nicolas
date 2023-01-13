@@ -25,3 +25,13 @@
     height: max(10rem, 25vh);
   }
 }
+
+@media (max-width: 768px) {
+  .cardContainer {
+    overflow: scroll;
+  }
+  .cardContainer img {
+    object-fit: cover;
+    height: max(8rem, 10vh);
+  }
+}
