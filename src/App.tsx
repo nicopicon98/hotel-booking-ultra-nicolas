@@ -16,8 +16,8 @@ const App = () => {
           <TopBar />
           <Routes>
             <Route path="/" element={<SimplePage />} />
-            <Route path="/Hotel-Search" element={<HotelsSearch />} />
-            <Route path="/Locations-Search" element={<LocationsSearch />} />
+            <Route path="/hotel-search" element={<HotelsSearch />} />
+            <Route path="/locations-search" element={<LocationsSearch />} />
           </Routes>
         </main>
       </div>
