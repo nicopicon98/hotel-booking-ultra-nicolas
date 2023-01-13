@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/hotel-booking-ultra-nicolas/static/css/main.1c15d569.css",
-    "main.js": "/hotel-booking-ultra-nicolas/static/js/main.f52abfef.js",
-    "index.html": "/hotel-booking-ultra-nicolas/index.html",
-    "main.1c15d569.css.map": "/hotel-booking-ultra-nicolas/static/css/main.1c15d569.css.map",
-    "main.f52abfef.js.map": "/hotel-booking-ultra-nicolas/static/js/main.f52abfef.js.map"
+    "main.css": "/static/css/main.1c15d569.css",
+    "main.js": "/static/js/main.f52abfef.js",
+    "index.html": "/index.html",
+    "main.1c15d569.css.map": "/static/css/main.1c15d569.css.map",
+    "main.f52abfef.js.map": "/static/js/main.f52abfef.js.map"
   },
   "entrypoints": [
     "static/css/main.1c15d569.css",
