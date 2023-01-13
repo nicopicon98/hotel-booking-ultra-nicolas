@@ -16,6 +16,10 @@
   border: none;
   transform: translate(-20%, 20%);
   transition: 0.3s ease-in-out;
+  align-items: flex-end;
+  width: 40px;
+  height: 40px;
+  padding: 6px;
 }
 
 .btnImgContainer__btnImg:hover {
@@ -56,10 +60,20 @@
   color: #55925A;
 }
 
-.basicInfoContainer__seals {
+.basicInfoContainer__sealsCon {
   display: flex;
   align-items: center;
-  gap: 5px;
+}
+
+.basicInfoContainer__sealsBtnIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  padding: 1px;
+  margin-right: 3px;
 }
 
 .basicInfoContainer__feedRatCon {

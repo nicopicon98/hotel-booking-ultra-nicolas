@@ -3,7 +3,7 @@ import { getHotelLocations } from '../services/getLocations.service'
 import { Property } from '../interfaces/ReqRespHotelInterface';
 import { isAtLeastOneMissing } from '../helper/isEmpty';
 import useGETurlParams from './useGETurlParams';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 interface HotelsRespHkk {
   location: string;
@@ -45,6 +45,7 @@ const useGEThotelsByParams = () => {
     }
     setIsHotelsLoading(false);
   }
+
 
   useEffect(() => {
     fetchInfo()

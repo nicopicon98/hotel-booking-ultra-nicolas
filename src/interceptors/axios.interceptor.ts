@@ -1,8 +1,9 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import { CONFIG_REQ } from '../config';
+import { getValidationError, SnackbarUtilities } from '../utilities';
 
 export const AxiosInterceptor = () => {
-  
+
   const updateHeader = (request: AxiosRequestConfig) => {
     const newHeaders = {
       'Content-Type': 'application/json',
@@ -18,4 +19,17 @@ export const AxiosInterceptor = () => {
     return updateHeader(request);
   });
 
+  axios.interceptors.response.use(
+    (response) => {
+      if(!response.data.data) return response
+      console.log('response', response);
+      SnackbarUtilities.success('Hoteles cargados con exito');
+      return response;
+    },
+    (error) => {
+      console.log('error', error);
+      SnackbarUtilities.error(getValidationError(error.code));
+      return Promise.reject(error);
+    }
+  );
 };

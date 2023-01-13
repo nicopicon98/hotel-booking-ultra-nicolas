@@ -13,8 +13,8 @@ interface Props {
 export const ButtonIcon: FC<Props> = ({ Icon, onClick, btnStyles = "", colorIcon = 'white', iconSize = 20 }) => {
   return (
     <div className={classes.btnContainer}>
-      <button onClick={onClick} className={`${btnStyles} ${classes.btn}`}>
-        <Icon color={colorIcon} size={30} style={{alignSelf: 'center'}}/>
+      <button onClick={onClick} className={`${classes.btn} ${btnStyles}`}>
+        <Icon color={colorIcon} size={iconSize} style={{ alignSelf: 'center' }} />
       </button>
     </div>
   )

@@ -1,3 +1,4 @@
+import { Reviews } from '../../interfaces/ReqRespHotelInterface';
 import { BsTagFill } from "react-icons/bs";
 import classes from './Listing.module.css'
 import { ButtonIcon } from "../ButtonIcon"
@@ -5,7 +6,6 @@ import { BsHeart } from "react-icons/bs";
 import { BiMoon } from "react-icons/bi";
 import { Card } from "../Card"
 import { FC } from 'react';
-import { Reviews } from '../../interfaces/ReqRespHotelInterface';
 
 interface Props {
   image?: string;
@@ -41,7 +41,7 @@ export const Listing: FC<Props> = ({
           Icon={BsHeart}
           btnStyles={classes["btnImgContainer__btnImg"]}
           colorIcon="black"
-          iconSize={50}
+          iconSize={30}
         />
       </div>
       {/* Basic info */}
@@ -52,8 +52,14 @@ export const Listing: FC<Props> = ({
         </section>
         <section>
           <p className={classes["basicInfoContainer__totReimb"]}>Totalmente reembolsable</p>
-          <div className={classes["basicInfoContainer__seals"]}>
-            <BiMoon />
+          <div className={classes["basicInfoContainer__sealsCon"]}>
+            <ButtonIcon
+              onClick={clickHandler}
+              Icon={BiMoon}
+              btnStyles={classes["basicInfoContainer__sealsBtnIcon"]}
+              colorIcon="white"
+              iconSize={20}
+            />
             <p>Acumula sellos</p>
           </div>
           <div className={classes["basicInfoContainer__feedRatCon"]}>

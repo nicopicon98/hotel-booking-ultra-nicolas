@@ -1,10 +1,10 @@
 interface Props {
   hotelsPerPage: number
-  totalHotels: number
+  totalHotels?: number
   paginate: (pageNumber: number) => void;
 }
 
-const PaginationComponent = ({ hotelsPerPage, totalHotels, paginate }: Props) => {
+const PaginationComponent = ({ hotelsPerPage, totalHotels = 0, paginate }: Props) => {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalHotels / hotelsPerPage); i++) {
@@ -13,10 +13,10 @@ const PaginationComponent = ({ hotelsPerPage, totalHotels, paginate }: Props) =>
 
   return (
     <nav>
-      <ul style={{display: 'flex', justifyContent: 'center', gap: '2px'}}>
+      <ul style={{ display: 'flex', justifyContent: 'center', gap: '2px' }}>
         {pageNumbers.map(number => (
           <li key={number} className='page-item'>
-            <button onClick={() => paginate(number)} style={{backgroundColor: '#7b1fa2', border: 'none'}}>
+            <button onClick={() => paginate(number)} style={{ backgroundColor: '#7b1fa2', border: 'none' }}>
               {number}
             </button>
           </li>

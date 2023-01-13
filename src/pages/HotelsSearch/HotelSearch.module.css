@@ -1,5 +1,5 @@
-.container{
-  background-color: #F6F4F3;
+.container {
+  background-color: #f6f4f3;
   padding-top: 10px;
   height: 100%;
   display: flex;
@@ -14,7 +14,25 @@
   height: 88%;
 }
 
-@media (max-width: 1200px){
+.loaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  justify-content: center;
+}
+
+.loaderContainer__text {
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.container__hotelsPagCon{
+  background-color: #F6F4F3;
+  padding-bottom: 10px
+}
+
+@media (max-width: 1200px) {
   .container__hotelsCon {
     display: grid;
     height: 100%;
@@ -25,7 +43,7 @@
   }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .container__hotelsCon {
     display: grid;
     height: 100%;
