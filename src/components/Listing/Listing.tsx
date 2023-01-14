@@ -1,29 +1,20 @@
-import { Reviews } from '../../interfaces/ReqRespHotelInterface';
 import { BsTagFill } from "react-icons/bs";
 import classes from './Listing.module.css'
 import { ButtonIcon } from "../ButtonIcon"
 import { BsHeart } from "react-icons/bs";
 import { BiMoon } from "react-icons/bi";
+import { Hotel } from "../../models";
 import { Card } from "../Card"
 import { FC } from 'react';
 
-interface Props {
-  image?: string;
-  hotelName?: string;
-  location?: string;
-  feedback?: Reviews;
-  partialPrice?: string;
-  totalPrice?: string;
-}
-
 const url = "https://www.rios.com/wp-content/uploads/2019/12/1-Hotel_Hunter-Kerhart_068-homepage-banner.jpg";
 
-export const Listing: FC<Props> = ({
+export const Listing: FC<Hotel> = ({
   image = url,
   hotelName = "Nombre no disponible",
   location = "no hay info",
-  partialPrice = "$N/A",
-  totalPrice = "$N/A",
+  partialPrice,
+  totalPrice,
   feedback,
 }) => {
 
@@ -80,8 +71,16 @@ export const Listing: FC<Props> = ({
           <p className={classes["priceContainer__secretPrice"]}>Precio secreto disponible</p>
         </section>
         <section className={classes["priceContainer_priceCon"]}>
-          <p className={classes["priceContainer_parcialPrice"]}>{partialPrice} USD</p>
-          <p className={classes["priceContainer_totalPrice"]} >{totalPrice} USD en total</p>
+          <p className={classes["priceContainer_parcialPrice"]}>
+            {partialPrice
+              ? partialPrice + " USD"
+              : "valor no disponible"}
+          </p>
+          <p className={classes["priceContainer_totalPrice"]}>
+            {totalPrice
+              ?  totalPrice  + " USD en total"
+              : "valor no disponible"}
+          </p>
         </section>
       </div>
     </Card>

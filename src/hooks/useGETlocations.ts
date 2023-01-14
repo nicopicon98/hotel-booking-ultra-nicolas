@@ -1,6 +1,6 @@
-import { getHotelLocations } from '../services/getLocations.service';
-import { Location } from '../types/LocationType';
 import { useState } from 'react';
+import { Location } from '../models';
+import { getHotelLocations } from '../services';
 
 const useGETlocations = () => {
   const [location, setLocation] = useState<Location>()

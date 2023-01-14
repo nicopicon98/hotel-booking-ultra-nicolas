@@ -1,8 +1,8 @@
-import { LocationsResp } from '../interfaces/LocationResponseInterface';
 import axios, { AxiosRequestConfig } from 'axios';
+import { ResLocation } from '../models';
 import { BASE_URL } from '../config';
 
-export const getHotelLocations = async (q: string): Promise<LocationsResp> => {
+export const getHotelLocations = async (q: string): Promise<ResLocation> => {
   const options: AxiosRequestConfig<any> = {
     method: 'GET',
     url: `${BASE_URL}/locations/v3/search`,

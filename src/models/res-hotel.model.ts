@@ -1,34 +1,4 @@
-export interface HotelSearchReq {
-  currency?: string,
-  eapid?: number,
-  locale?: string,
-  siteId?: number,
-  resultsSize: number;
-  resultsStartingIndex: number;
-  destination: Destination;
-  checkInDate: CheckInOutDate;
-  checkOutDate: CheckInOutDate;
-  rooms: RoomType
-}
-
-export type Destination = {
-  regionId: string;
-};
-
-export type CheckInOutDate = {
-  day: number;
-  month: number;
-  year: number;
-}
-
-export type RoomType = Array<{
-  adults: number;
-  children: Array<{
-    age: number
-  }>
-}>
-
-export interface HotelSearchResp {
+export interface ResHotel {
   data: Data;
 }
 
@@ -296,13 +266,9 @@ export interface PropertyImage {
 
 
 export interface Image {
-  __typename:  ImageTypename;
+  __typename:  string;
   description: string;
   url:         string;
-}
-
-export enum ImageTypename {
-  Image = "Image",
 }
 
 

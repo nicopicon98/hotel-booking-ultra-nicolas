@@ -1,8 +1,17 @@
-import { ValidateValue } from "../types/ValidateValueType";
-import { InputAction } from "../types/InputActionType";
-import { InputState } from "../types/InputStateType";
 import { useReducer } from "react";
 import React from 'react';
+
+export type InputAction =
+  | { type: 'INPUT', value: any }
+  | { type: 'BLUR' }
+  | { type: 'RESET' }
+
+export type InputState = {
+  value: string;
+  isTouched: boolean;
+}
+
+export type ValidateValue = (value: any) => boolean;
 
 const inputStateReducer = (state: InputState, action: InputAction) => {
   switch (action.type) {
