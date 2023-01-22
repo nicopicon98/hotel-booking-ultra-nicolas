@@ -2,12 +2,14 @@ import PaginationComponent from '../../components/Pagination/PaginationComponent
 import { SnackbarUtilities } from '../../utilities/snackbar-manager.utility';
 import MissingParam from '../../components/MissingParam/MissingParam';
 import useGEThotelsByParams from '../../hooks/useGEThotelsByParams';
-import { HotelLoader } from '../../components/Loaders/HotelLoader';
 import { createHotelAdapter } from '../../adapters';
 import { Listing } from '../../components/Listing';
 import classes from './HotelSearch.module.css'
 import { useState, useEffect } from 'react';
+import { HotelLoader } from '../../components/Loaders';
+import { AxiosInterceptor } from '../../interceptors';
 
+AxiosInterceptor();
 export const HotelsSearch = () => {
   const { isHotelsLoading, isValueEmpty, hotels } = useGEThotelsByParams();
   const [currentPage, setCurrentPage] = useState(1);

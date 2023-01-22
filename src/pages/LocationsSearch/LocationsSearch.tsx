@@ -1,4 +1,4 @@
-import { SimpleInput } from '../../components/SimpleInput/SimpleInput';
+import { SimpleInput } from '../../components/SimpleInput';
 import useGETlocations from '../../hooks/useGETlocations';
 import classes from './LocationsSearch.module.css';
 

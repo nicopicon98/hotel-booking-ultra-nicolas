@@ -10,7 +10,7 @@ export const getValidationError = (errorCode: any) => {
     ERR_400: 'Error 400',
     ERR_401: 'Error 401',
     ERR_403: 'Error 403',
-    ERR_429: 'Se ha excedido la quota para esta api',
+    429: 'Se ha excedido la quota para esta api',
   };
   return codeMatcher[errorCode];
 };

@@ -21,14 +21,14 @@ export const AxiosInterceptor = () => {
 
   axios.interceptors.response.use(
     (response) => {
-      if(!response.data.data) return response
       console.log('response', response);
       SnackbarUtilities.success('Hoteles cargados con exito');
       return response;
     },
     (error) => {
-      console.log('error', error);
-      SnackbarUtilities.error(getValidationError(error.code));
+      console.log(error);
+      console.log(error.response);
+      SnackbarUtilities.error(getValidationError(error.response.status));
       return Promise.reject(error);
     }
   );
