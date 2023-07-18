@@ -1,3 +1,7 @@
+# Deployed example
+
+https://nicopicon.co/#/Hotel-search?resultsSize=20&resultsStartingIndex=1&destination=6054439&checkInDate=2023-10-12&checkOutDate=2023-10-14&adults=1
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
